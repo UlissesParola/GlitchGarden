@@ -17,7 +17,7 @@ public class SplashManager : MonoBehaviour
 	void Update () {
 		if (Time.time >= _sceneChangeTime)
 		{
-			LevelManager.LoadScene("StartMenu");
+			LevelManager.LoadScene("01a StartMenu");
 			
 		}
 	}
