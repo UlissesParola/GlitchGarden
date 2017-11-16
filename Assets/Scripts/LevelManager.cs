@@ -21,4 +21,9 @@ public class LevelManager : MonoBehaviour {
 		Application.Quit();
 		Debug.Log("Quit");
 	}
+
+	public void SceneTransition(string scene, float delay)
+	{
+		Invoke("this.LoadScene(" + scene + ")", delay);
+	}
 }
