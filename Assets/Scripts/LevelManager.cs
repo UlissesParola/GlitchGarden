@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
+	public float AutoLoadNextLevel;
+
+	private void Start()
+	{
+		if (AutoLoadNextLevel != 0)
+		{
+			Invoke("LoadNextScene", AutoLoadNextLevel);
+		}
+	}
 
 	public void LoadScene(string scene)
 	{

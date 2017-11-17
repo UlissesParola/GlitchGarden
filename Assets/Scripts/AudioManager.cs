@@ -16,9 +16,17 @@ public class AudioManager : MonoBehaviour
 
 	public void PlayAudioClip(int clipIndex)
 	{
-		ActualClipIndex = clipIndex;
-		_source.clip = AudioClips[clipIndex];
-		_source.Play();
+		if (AudioClips[clipIndex] != null)
+		{
+			ActualClipIndex = clipIndex;
+			_source.clip = AudioClips[clipIndex];
+			_source.Play();
+		}
+		else
+		{
+			Debug.Log("Array index is null.");
+		}
+
 	}
 	
 }

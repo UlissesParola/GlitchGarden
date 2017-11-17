@@ -25,16 +25,14 @@ public class SceneAudioManager : MonoBehaviour {
 		
 		if (_sceneIndex == 1)
 		{
-			if ((_audioSource.clip == null || _audioManager.ActualClipIndex != 0))
+			if ((_audioSource.clip == null || _audioManager.ActualClipIndex != 1))
 			{
-				_audioManager.PlayAudioClip(0);
-				Debug.Log("Start");
+				_audioManager.PlayAudioClip(1);
 			}
 		}
 		else
 		{
-			_audioManager.PlayAudioClip(_sceneIndex - 1);
-			Debug.Log("Else");
+			_audioManager.PlayAudioClip(_sceneIndex);
 		}
 	}
 }
