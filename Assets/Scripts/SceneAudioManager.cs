@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneAudioManager : MonoBehaviour {
+public class SceneAudioManager : MonoBehaviour
+{
+	public bool loop = true;
 	
 	private AudioManager _audioManager;
 	private AudioSource _audioSource;
@@ -20,9 +22,6 @@ public class SceneAudioManager : MonoBehaviour {
 
 	private void ChoosingAudioClip()
 	{
-		Debug.Log(_audioManager.ActualClipIndex);
-		Debug.Log(_audioSource.clip == null);
-		
 		if (_sceneIndex == 1)
 		{
 			if ((_audioSource.clip == null || _audioManager.ActualClipIndex != 1))
@@ -33,6 +32,7 @@ public class SceneAudioManager : MonoBehaviour {
 		else
 		{
 			_audioManager.PlayAudioClip(_sceneIndex);
+			_audioSource.loop = loop;
 		}
 	}
 }
