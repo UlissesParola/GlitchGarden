@@ -7,6 +7,7 @@ public class OptionsController : MonoBehaviour
 {
     public Slider VolumeSlider;
     public Text DifficultyText;
+    public Text VolumeText;
 
     private int _difficultyIndex = 1;
     private AudioManager _audioManager;
@@ -30,6 +31,7 @@ public class OptionsController : MonoBehaviour
         {
             _audioManager.GetComponent<AudioSource>().volume = volume;
             _currentVolume = volume;
+            VolumeText.text = (int ) ( _currentVolume * 100) + "%";
         }
         else
         {
@@ -73,5 +75,11 @@ public class OptionsController : MonoBehaviour
         VolumeSlider.value = _currentVolume;
         ChangeDifficulty(PlayerPrefsManager.GetDifficulty());  
     }
-    
+
+    public void SetDefaults()
+    {
+        ChangeVolume(1f);
+        VolumeSlider.value = 1f;
+        ChangeDifficulty(1);
+    }
 }
