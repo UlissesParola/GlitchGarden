@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
 	void Start () {
 		DontDestroyOnLoad(this);
 		_source = GetComponent<AudioSource>();
+		ChangeVolume(PlayerPrefsManager.GetMasterVolume());
 	}
 
 	public void PlayAudioClip(int clipIndex)
@@ -26,7 +27,11 @@ public class AudioManager : MonoBehaviour
 		{
 			Debug.Log("Array index is null.");
 		}
+	}
 
+	public void ChangeVolume(float newVolume)
+	{
+		_source.volume = newVolume;
 	}
 	
 }

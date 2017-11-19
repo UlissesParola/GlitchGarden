@@ -18,6 +18,11 @@ public class PlayerPrefsManager : MonoBehaviour
 			Debug.LogError("Volume out of range.");
 		}
 	}
+	
+	public static float GetMasterVolume()
+	{
+		return PlayerPrefs.GetFloat(MasterVolumeKey);
+	}
 
 	public static void SetDifficulty(int difficulty)
 	{
@@ -29,11 +34,10 @@ public class PlayerPrefsManager : MonoBehaviour
 		{
 			Debug.LogError("Difficult out of range.");
 		}
-		
 	}
 
-	public static float GetMasterVolume()
+	public static int GetDifficulty()
 	{
-		return PlayerPrefs.GetFloat(MasterVolumeKey);
+		return PlayerPrefs.GetInt(DifficultyKey);
 	}
 }
