@@ -31,7 +31,7 @@ public class OptionsController : MonoBehaviour
         {
             _audioManager.GetComponent<AudioSource>().volume = volume;
             _currentVolume = volume;
-            VolumeText.text = (int ) ( _currentVolume * 100) + "%";
+            VolumeText.text = (int) ( _currentVolume * 100) + "%";
         }
         else
         {
