@@ -8,6 +8,8 @@ public class Attacker : MonoBehaviour
 	[Range(-1, 2f)] 
 	public float WalkingSpeed;
 
+	private GameObject _currentTarget;
+
 	public void SetSpeed(float speed)
 	{
 		WalkingSpeed = speed;
@@ -17,10 +19,10 @@ public class Attacker : MonoBehaviour
 	void Start ()
 	{
 		//alternative form to add a Rigidbody2D component
-		Rigidbody2D myRigidBody = gameObject.AddComponent<Rigidbody2D>();
+		//Rigidbody2D myRigidBody = gameObject.AddComponent<Rigidbody2D>();
 		
 		//turn it kinematic
-		myRigidBody.isKinematic = true;
+		//myRigidBody.isKinematic = true;
 	}
 	
 	// Update is called once per frame
@@ -28,13 +30,13 @@ public class Attacker : MonoBehaviour
 		transform.Translate(Vector3.left * WalkingSpeed * Time.deltaTime);
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		Debug.Log(other.name + " trigger enter.");
-	}
-
 	public void StrikeCurrentTarget(float damage)
 	{
 		Debug.Log("Deal " + damage + " damage");
+	}
+
+	public void Attack(GameObject target)
+	{
+		_currentTarget = target;
 	}
 }

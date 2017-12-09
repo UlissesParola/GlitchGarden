@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Defender : MonoBehaviour {
+public class Stone : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,5 +13,4 @@ public class Defender : MonoBehaviour {
 	void Update () {
 		
 	}
-
 }
