@@ -9,6 +9,7 @@ public class Attacker : MonoBehaviour
 	public float WalkingSpeed;
 
 	private GameObject _currentTarget;
+	private Animator _anim;
 
 	public void SetSpeed(float speed)
 	{
@@ -18,9 +19,10 @@ public class Attacker : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		_anim = GetComponent<Animator>();
 		//alternative form to add a Rigidbody2D component
 		//Rigidbody2D myRigidBody = gameObject.AddComponent<Rigidbody2D>();
-		
+
 		//turn it kinematic
 		//myRigidBody.isKinematic = true;
 	}
@@ -28,15 +30,25 @@ public class Attacker : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector3.left * WalkingSpeed * Time.deltaTime);
+
+		if (_currentTarget == null)
+		{
+			_anim.SetBool("IsAttacking", false);
+		}
 	}
 
 	public void StrikeCurrentTarget(float damage)
 	{
-		_currentTarget.GetComponent<Health>().Hitted(damage);
+		if (_currentTarget)
+		{
+			_currentTarget.GetComponent<Health>().Hitted(damage);
+		}
+
 	}
 
 	public void Attack(GameObject target)
 	{
 		_currentTarget = target;
+		_anim.SetBool("IsAttacking", true);
 	}
 }
