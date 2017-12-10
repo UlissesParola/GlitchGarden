@@ -34,7 +34,6 @@ public class Fox : MonoBehaviour
 		}
 		else
 		{
-			_animator.SetBool("IsAttacking", true);
 			_attacker.Attack(other.gameObject);
 		}
 	}
