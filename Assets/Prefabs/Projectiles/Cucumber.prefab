@@ -37,6 +37,8 @@ GameObject:
   - component: {fileID: 4237363645212228}
   - component: {fileID: 50932830735010106}
   - component: {fileID: 61516725568091762}
+  - component: {fileID: 95243956605932040}
+  - component: {fileID: 114566696557022690}
   m_Layer: 0
   m_Name: Cucumber
   m_TagString: Untagged
@@ -116,6 +118,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.56, y: 0.56}
   m_EdgeRadius: 0
+--- !u!95 &95243956605932040
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482617512006286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc34c4e5e5a293049a720c4dc589b887, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114566696557022690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482617512006286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfa9d43a0681e94dadd227169994ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
 --- !u!212 &212425875348651044
 SpriteRenderer:
   m_ObjectHideFlags: 1

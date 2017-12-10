@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61420502890937290}
   - component: {fileID: 114996850638893484}
   - component: {fileID: 50651371541112940}
+  - component: {fileID: 114552954503876802}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -148,6 +149,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkingSpeed: 0.4
+--- !u!114 &114552954503876802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1088251932228932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 3
 --- !u!114 &114996850638893484
 MonoBehaviour:
   m_ObjectHideFlags: 1

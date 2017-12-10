@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61347999778049278}
   - component: {fileID: 50793572095983444}
   - component: {fileID: 114464458164339232}
+  - component: {fileID: 114271437331109544}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -136,6 +137,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114271437331109544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076732128328686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 5
 --- !u!114 &114464458164339232
 MonoBehaviour:
   m_ObjectHideFlags: 1
