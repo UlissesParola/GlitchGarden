@@ -32,7 +32,7 @@ public class Attacker : MonoBehaviour
 
 	public void StrikeCurrentTarget(float damage)
 	{
-		Debug.Log("Deal " + damage + " damage");
+		_currentTarget.GetComponent<Health>().Hitted(damage);
 	}
 
 	public void Attack(GameObject target)
