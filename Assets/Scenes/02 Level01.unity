@@ -481,11 +481,6 @@ Prefab:
       propertyPath: ProjectileParent
       value: 
       objectReference: {fileID: 611546167}
-    - target: {fileID: 114278219731146062, guid: 3eb5e15801f24cd46bb8a499f38e4aef,
-        type: 2}
-      propertyPath: Gun
-      value: 
-      objectReference: {fileID: 941034002}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3eb5e15801f24cd46bb8a499f38e4aef, type: 2}
   m_IsPrefabParent: 0
@@ -536,11 +531,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4074416088862772, guid: ced520baa33b4c84f952493015b8e931,
     type: 2}
   m_PrefabInternal: {fileID: 1786090250}
---- !u!4 &941034002 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4226129931994196, guid: 3eb5e15801f24cd46bb8a499f38e4aef,
-    type: 2}
-  m_PrefabInternal: {fileID: 644395296}
 --- !u!4 &1037249542 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4300249390868458, guid: e613394185d2c31489814abdbd6f2cbf,
