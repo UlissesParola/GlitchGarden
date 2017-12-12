@@ -57,6 +57,8 @@ GameObject:
   - component: {fileID: 224391843511973064}
   - component: {fileID: 222194730082294366}
   - component: {fileID: 114304663861558898}
+  - component: {fileID: 114675079834317386}
+  - component: {fileID: 61633570203383264}
   m_Layer: 5
   m_Name: Core Game
   m_TagString: Untagged
@@ -168,6 +170,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!61 &61633570203383264
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458526102868654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1200, y: 675}
+  m_EdgeRadius: 0
 --- !u!114 &114007193423076972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,6 +596,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114675079834317386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458526102868654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fbdc13cfba5914db06ff4148d8230c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114966866819561800
 MonoBehaviour:
   m_ObjectHideFlags: 1
