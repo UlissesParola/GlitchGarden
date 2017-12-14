@@ -19,12 +19,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4422196619722420}
-  - component: {fileID: 95160473364400640}
-  - component: {fileID: 114542008838474288}
-  - component: {fileID: 61347999778049278}
   - component: {fileID: 50793572095983444}
-  - component: {fileID: 114464458164339232}
+  - component: {fileID: 61347999778049278}
+  - component: {fileID: 95160473364400640}
   - component: {fileID: 114271437331109544}
+  - component: {fileID: 114542008838474288}
+  - component: {fileID: 114464458164339232}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -67,8 +67,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076732128328686}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 3, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4067705655906384}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 5
+  HealthPoints: 40
 --- !u!114 &114464458164339232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkingSpeed: 1
+  SeenEverySeconds: 5
 --- !u!212 &212317971541409574
 SpriteRenderer:
   m_ObjectHideFlags: 1

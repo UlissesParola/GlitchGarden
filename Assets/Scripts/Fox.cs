@@ -32,7 +32,7 @@ public class Fox : MonoBehaviour
 		{
 			_animator.SetTrigger("Jump Trigger");
 		}
-		else
+		else 
 		{
 			_attacker.Attack(other.gameObject);
 		}
