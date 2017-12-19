@@ -7,19 +7,11 @@ public class Spawner : MonoBehaviour
 {
 	public GameObject[] Attackers;
 
-	private GameObject _parent;
 	private Random _random;
 	private bool _waiting;
 	
 	// Use this for initialization
 	void Start () {
-		_parent = GameObject.Find("Attackers");
-		
-		if (_parent == null)
-		{
-			_parent = new GameObject("Attackers");
-		}
-
 		int seed = Mathf.RoundToInt(this.transform.position.y * Time.realtimeSinceStartup);
 		_random = new Random(seed);
 		StartCoroutine(Wait(_random.Next(0, 10)));
@@ -32,7 +24,7 @@ public class Spawner : MonoBehaviour
 			int attackersIndex = _random.Next(0, Attackers.Length);
 			GameObject attackerPrefab = Attackers[attackersIndex];
 			int time = attackerPrefab.GetComponent<Attacker>().SeenEverySeconds;
-			float seconds = _random.Next(time/2, time * 2) ;
+			float seconds = _random.Next(time/10, time * 10) ;
 			StartCoroutine(Wait(seconds));
 			Spawn(attackerPrefab);
 		}
@@ -42,7 +34,7 @@ public class Spawner : MonoBehaviour
 	{
 		Vector3 position = gameObject.transform.position;
 		GameObject newAttacker = Instantiate(attackerPrefab, position, Quaternion.identity);
-		newAttacker.transform.SetParent(_parent.transform);
+		newAttacker.transform.SetParent(this.transform);
 	}
 
 	private IEnumerator Wait(float seconds)
