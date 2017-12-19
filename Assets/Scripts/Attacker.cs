@@ -8,6 +8,9 @@ public class Attacker : MonoBehaviour
 	[Range(-1, 2f)] 
 	public float WalkingSpeed;
 
+	[Tooltip("Averange number of seconds between apearences")] 
+	public int SeenEverySeconds;
+
 	private GameObject _currentTarget;
 	private Animator _anim;
 

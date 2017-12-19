@@ -127,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!95 &95225189688897222
 Animator:
@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile: {fileID: 1849768687143374, guid: 96dd78ffb13361a42b9e036c9068bced, type: 2}
-  ProjectileParent: {fileID: 0}
   Gun: {fileID: 4226129931994196}
 --- !u!114 &114487662986812514
 MonoBehaviour:
@@ -182,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 5
+  HealthPoints: 40
 --- !u!212 &212369561711130480
 SpriteRenderer:
   m_ObjectHideFlags: 1
