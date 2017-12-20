@@ -6,9 +6,13 @@ public class DefenderSpawner : MonoBehaviour
 {
 
 	private GameObject _defenderParent;
+	private StarDisplay _starDisplay;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
+		_starDisplay = FindObjectOfType<StarDisplay>();
+		
 		_defenderParent = GameObject.Find("Defenders");
 		if (_defenderParent == null)
 		{
@@ -18,9 +22,19 @@ public class DefenderSpawner : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		Vector2 instancePosition = SnapToGrid(CalculateWorldUnit());
-		GameObject defender = Instantiate(Button.SelectedDefender, instancePosition, Quaternion.identity);
-		defender.transform.SetParent(_defenderParent.transform);
+		int defenderCost = Button.SelectedDefender.GetComponent<Defender>().StarCost;
+
+		if (_starDisplay.UseStars(defenderCost) == StarDisplay.Status.Success)
+		{
+			Vector2 instancePosition = SnapToGrid(CalculateWorldUnit());
+			GameObject defender = Instantiate(Button.SelectedDefender, instancePosition, Quaternion.identity);
+			defender.transform.SetParent(_defenderParent.transform);
+		}
+		else
+		{
+			Debug.Log("Insuficient stars");
+		}
+		
 	}
 
 	private Vector2 CalculateWorldUnit()
