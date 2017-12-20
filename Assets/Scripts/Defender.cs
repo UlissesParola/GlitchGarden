@@ -5,7 +5,6 @@ using UnityEngine;
 public class Defender : MonoBehaviour
 {
 	public int StarCost;
-	
 	private StarDisplay _starDisplay;
 	// Use this for initialization
 	void Start ()
