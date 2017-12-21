@@ -6,18 +6,23 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
-	public float AutoLoadNextLevel;
+	public bool AutoLoadNextLevel;
+	public float AutoLoadTimer;
+
+	private static string _lastScene;
 
 	private void Start()
 	{
-		if (AutoLoadNextLevel != 0)
+		if (AutoLoadNextLevel)
 		{
-			Invoke("LoadNextScene", AutoLoadNextLevel);
+			Invoke("LoadNextScene", AutoLoadTimer);
 		}
 	}
 
 	public void LoadScene(string scene)
 	{
+		_lastScene = SceneManager.GetActiveScene().name;
+		Debug.Log(_lastScene);
 		SceneManager.LoadScene(scene);
 	}
 
@@ -35,5 +40,10 @@ public class LevelManager : MonoBehaviour
 	public void SceneTransition(string scene, float delay)
 	{
 		Invoke("this.LoadScene(" + scene + ")", delay);
+	}
+
+	public void Restart()
+	{
+		SceneManager.LoadScene(_lastScene);
 	}
 }
