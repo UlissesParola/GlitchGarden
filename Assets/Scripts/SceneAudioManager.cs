@@ -35,4 +35,9 @@ public class SceneAudioManager : MonoBehaviour
 			_audioSource.loop = loop;
 		}
 	}
+
+	public void PlayClip(AudioClip clip)
+	{
+		_audioManager.PlayClip(clip);
+	}
 }

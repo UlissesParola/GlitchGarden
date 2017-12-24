@@ -6,32 +6,38 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
 	public float LevelDuration;
-
+	public GameObject LevelEndPanel;
+	public AudioClip LevelEndSound;
+	
+	private SceneAudioManager _audioManager;
+	private bool _levelEnded;
 	private LevelManager _levelManager;
-	private float _endTime;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		_endTime = Time.time + LevelDuration;
 		_levelManager = FindObjectOfType<LevelManager>();
+		_audioManager = GameObject.FindObjectOfType<SceneAudioManager>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		GetComponent<Slider>().value = Time.time / _endTime;
+		GetComponent<Slider>().value = Time.timeSinceLevelLoad / LevelDuration;
 		
-		if (Time.time > _endTime)
+		if (Time.timeSinceLevelLoad > LevelDuration && !_levelEnded)
 		{
 			Debug.Log("Level ended");
 			LevelEnd();
+			_levelEnded = true;
 		}
 	}
 
 	void LevelEnd()
 	{
-		Invoke("AutoLoadNextLevel", 3);
+		LevelEndPanel.SetActive(true);
+		Invoke("AutoLoadNextLevel", LevelEndSound.length);
+		_audioManager.PlayClip(LevelEndSound);
 	}
 
 	void AutoLoadNextLevel()
