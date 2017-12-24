@@ -555,18 +555,8 @@ Prefab:
     - target: {fileID: 224665274865474188, guid: 98879a803b9476e47a61f3cead32748f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114767576002957364, guid: 98879a803b9476e47a61f3cead32748f,
-        type: 2}
-      propertyPath: LevelDuration
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114767576002957364, guid: 98879a803b9476e47a61f3cead32748f,
-        type: 2}
-      propertyPath: LevelEndSound
-      value: 
-      objectReference: {fileID: 8300000, guid: faaa11282ef4acb46a64739e3edfc114, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98879a803b9476e47a61f3cead32748f, type: 2}
   m_IsPrefabParent: 0

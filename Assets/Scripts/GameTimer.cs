@@ -27,21 +27,21 @@ public class GameTimer : MonoBehaviour
 		
 		if (Time.timeSinceLevelLoad > LevelDuration && !_levelEnded)
 		{
-			Debug.Log("Level ended");
 			LevelEnd();
 			_levelEnded = true;
+			Time.timeScale = 0;
 		}
 	}
 
 	void LevelEnd()
 	{
 		LevelEndPanel.SetActive(true);
-		Invoke("AutoLoadNextLevel", LevelEndSound.length);
-		_audioManager.PlayClip(LevelEndSound);
+		_audioManager.PlayClip(LevelEndSound);	
 	}
 
-	void AutoLoadNextLevel()
+	public void LoadNextlevel()
 	{
+		Time.timeScale = 1;
 		_levelManager.LoadNextScene();
 	}
 }
