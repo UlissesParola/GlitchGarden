@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: becd718f5682b254a9b819ec4950bf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelDuration: 5
+  LevelDuration: 30
   LevelEndPanel: {fileID: 1002662144168420}
   LevelEndSound: {fileID: 8300000, guid: faaa11282ef4acb46a64739e3edfc114, type: 3}
 --- !u!114 &114814238658482878
