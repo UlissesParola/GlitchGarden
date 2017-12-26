@@ -4,9 +4,8 @@
     <list default="true" id="fc4413eb-36cd-45c0-a06e-1488c6cd757c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/02 Level01.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/02 Level01.unity" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.GlitchGarden/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.GlitchGarden/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Canvas.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Canvas.prefab" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/GameTimer.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/GameTimer.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Buttons/Buttons.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Buttons/Buttons.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Button.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Button.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameTimer.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameTimer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameTimer.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
@@ -73,6 +72,37 @@
                 <marker date="1514146127064" expanded="true" signature="718:787" ph="{...}" />
                 <marker date="1514146127064" expanded="true" signature="808:889" ph="{...}" />
                 <marker date="1514146127064" expanded="true" signature="919:980" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stone.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Stone.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <marker date="1514210396095" expanded="false" signature="6:78" ph="..." />
+                <marker date="1514210396095" expanded="true" signature="115:318" ph="{...}" />
+                <marker date="1514210396095" expanded="true" signature="167:316" ph="{...}" />
+                <marker date="1514210396095" expanded="true" signature="217:301" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Button.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <marker date="1514234497373" expanded="true" signature="6:100" ph="..." />
+                <marker date="1514234497373" expanded="true" signature="137:691" ph="{...}" />
+                <marker date="1514234497373" expanded="true" signature="285:455" ph="{...}" />
+                <marker date="1514234497373" expanded="true" signature="484:689" ph="{...}" />
+                <marker date="1514234497373" expanded="true" signature="556:624" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -192,6 +222,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FadeInBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneAudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OptionsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lose.cs" root0="FORCE_HIGHLIGHTING" />
@@ -209,7 +240,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Lizard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Edge.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Button.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Attacker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Fox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shooter.cs" />
@@ -222,6 +252,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Button.cs" />
       </list>
     </option>
   </component>
@@ -252,6 +284,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <PATH>
@@ -268,7 +301,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,11 +425,13 @@
       <workItem from="1513852591692" duration="2589000" />
       <workItem from="1514114983564" duration="7030000" />
       <workItem from="1514145058334" duration="1390000" />
+      <workItem from="1514210155096" duration="848000" />
+      <workItem from="1514234153408" duration="944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78993000" />
+    <option name="totallyTimeSpent" value="80785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,8 +672,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Button.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="360">
+          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <marker date="1514234497373" expanded="true" signature="6:100" ph="..." />
+            <marker date="1514234497373" expanded="true" signature="137:691" ph="{...}" />
+            <marker date="1514234497373" expanded="true" signature="285:455" ph="{...}" />
+            <marker date="1514234497373" expanded="true" signature="484:689" ph="{...}" />
+            <marker date="1514234497373" expanded="true" signature="556:624" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
