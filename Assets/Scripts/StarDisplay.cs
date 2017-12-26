@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class StarDisplay : MonoBehaviour
 {
-	public int Stars;
+	public int Stars = 100;
+
+	public enum Status
+	{
+		Success,
+		Failure
+	};
 	
 	private Text _starsText;
 	
@@ -21,9 +28,14 @@ public class StarDisplay : MonoBehaviour
 		_starsText.text = Stars.ToString();
 	}
 
-	public void UseStars(int amount)
+	public Status UseStars(int amount)
 	{
-		Stars -= amount;
-		_starsText.text = Stars.ToString();
+		if (Stars >= amount)
+		{
+			Stars -= amount;
+			_starsText.text = Stars.ToString();
+			return Status.Success;
+		}
+		return Status.Failure;
 	}
 }

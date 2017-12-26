@@ -14,17 +14,26 @@ public class Spawner : MonoBehaviour
 	void Start () {
 		int seed = Mathf.RoundToInt(this.transform.position.y * Time.realtimeSinceStartup);
 		_random = new Random(seed);
-		StartCoroutine(Wait(_random.Next(0, 10)));
+		StartCoroutine(Wait(_random.Next(0, 50)));
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		/*foreach (GameObject thisAttacker in Attackers)
+		{
+			if (IsTimeToSpawn(thisAttacker))
+			{
+				Spawn(thisAttacker);
+			}
+		}*/
+		
 		if (!_waiting)
 		{
 			int attackersIndex = _random.Next(0, Attackers.Length);
 			GameObject attackerPrefab = Attackers[attackersIndex];
 			int time = attackerPrefab.GetComponent<Attacker>().SeenEverySeconds;
-			float seconds = _random.Next(time/10, time * 10) ;
+			float seconds = _random.Next(time/50, time * 50) ;
 			StartCoroutine(Wait(seconds));
 			Spawn(attackerPrefab);
 		}
@@ -42,5 +51,23 @@ public class Spawner : MonoBehaviour
 		_waiting = true;
 		yield return new WaitForSeconds(seconds);
 		_waiting = false;
+	}
+	
+	private bool IsTimeToSpawn(GameObject attacker) {
+		var myAttacker = attacker.GetComponent<Attacker>();
+		float secondsPerSpawn = myAttacker.SeenEverySeconds;
+		float probabilityToSpawnInGivenSecond = (1 / secondsPerSpawn) / 5;
+ 
+		if (Time.deltaTime > secondsPerSpawn) {
+			Debug.LogWarning("Spawn rate capped by frame rate");
+		}
+ 
+		// probability increases the longer it takes this frame to show
+		float probabilityToSpawnInGivenFrame = probabilityToSpawnInGivenSecond * Time.deltaTime;
+ 
+		if (UnityEngine.Random.value < probabilityToSpawnInGivenFrame)
+			return true;
+		else
+			return false;
 	}
 }

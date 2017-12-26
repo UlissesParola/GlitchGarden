@@ -33,5 +33,10 @@ public class AudioManager : MonoBehaviour
 	{
 		_source.volume = newVolume;
 	}
-	
+
+	public void PlayClip(AudioClip clip)
+	{
+		_source.Stop();
+		_source.PlayOneShot(clip);
+	}
 }
