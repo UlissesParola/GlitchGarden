@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 212369561711130480}
   m_Layer: 0
   m_Name: Gnome
-  m_TagString: Untagged
+  m_TagString: Defender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d556042f86ddc8e4b98a414d89c12df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarCost: 30
+  StarCost: 40
 --- !u!114 &114706861675422912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 40
+  HealthPoints: 10
 --- !u!212 &212369561711130480
 SpriteRenderer:
   m_ObjectHideFlags: 1

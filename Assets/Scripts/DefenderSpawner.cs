@@ -22,14 +22,14 @@ public class DefenderSpawner : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		if (Button.SelectedDefender != null)
+		if (DefenderButton.SelectedDefender != null)
 		{
-			int defenderCost = Button.SelectedDefender.GetComponent<Defender>().StarCost;
+			int defenderCost = DefenderButton.SelectedDefender.GetComponent<Defender>().StarCost;
 
 			if (_starDisplay.UseStars(defenderCost) == StarDisplay.Status.Success)
 			{
 				Vector2 instancePosition = SnapToGrid(CalculateWorldUnit());
-				GameObject defender = Instantiate(Button.SelectedDefender, instancePosition, Quaternion.identity);
+				GameObject defender = Instantiate(DefenderButton.SelectedDefender, instancePosition, Quaternion.identity);
 				defender.transform.SetParent(_defenderParent.transform);
 			}
 			else

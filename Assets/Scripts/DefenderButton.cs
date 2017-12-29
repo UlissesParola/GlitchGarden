@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Button : MonoBehaviour
+public class DefenderButton : MonoBehaviour
 {
 	public GameObject Defender;
 	public static GameObject SelectedDefender;
 
 	private Text _cost;
-	private Button[] _buttons;
+	private DefenderButton[] _defenderButtons;
 
 	private void Start()
 	{
-		_buttons = FindObjectsOfType<Button>();
+		_defenderButtons = FindObjectsOfType<DefenderButton>();
 		_cost = transform.GetComponentInChildren<Text>();
 		_cost.text = Defender.GetComponent<Defender>().StarCost.ToString();
 	}
@@ -22,7 +22,7 @@ public class Button : MonoBehaviour
 	{
 		SelectedDefender = Defender;
 		
-		foreach (Button obj in _buttons)
+		foreach (DefenderButton obj in _defenderButtons)
 		{
 				obj.GetComponent<SpriteRenderer>().color = Color.black;
 		}

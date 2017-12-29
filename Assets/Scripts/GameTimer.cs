@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
 	public float LevelDuration;
-	public GameObject LevelEndPanel;
+	public GameObject LevelEndCanvas;
 	public AudioClip LevelEndSound;
 	
 	private SceneAudioManager _audioManager;
@@ -28,15 +28,31 @@ public class GameTimer : MonoBehaviour
 		if (Time.timeSinceLevelLoad > LevelDuration && !_levelEnded)
 		{
 			LevelEnd();
-			_levelEnded = true;
-			Time.timeScale = 0;
 		}
+	}
+
+	void DestroyObjectsInScene()
+	{
+		string[] tagsToDestroy = {"Attacker", "Defender", "Projectile"};
+
+		foreach (string tagToDestroy in tagsToDestroy)
+		{
+			GameObject[] objs =  GameObject.FindGameObjectsWithTag(tagToDestroy);
+			foreach (GameObject obj in objs)
+			{
+				Destroy(obj);
+			}
+		}
+
 	}
 
 	void LevelEnd()
 	{
-		LevelEndPanel.SetActive(true);
-		_audioManager.PlayClip(LevelEndSound);	
+		DestroyObjectsInScene();
+		LevelEndCanvas.SetActive(true);
+		_audioManager.PlayClip(LevelEndSound);
+		_levelEnded = true;
+		Time.timeScale = 0;
 	}
 
 	public void LoadNextlevel()

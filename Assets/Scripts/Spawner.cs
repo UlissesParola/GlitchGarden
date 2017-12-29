@@ -12,9 +12,9 @@ public class Spawner : MonoBehaviour
 	
 	// Use this for initialization
 	void Start () {
-		int seed = Mathf.RoundToInt(this.transform.position.y * Time.realtimeSinceStartup);
+		int seed = Mathf.RoundToInt(this.transform.position.y * System.DateTime.Now.Millisecond);
 		_random = new Random(seed);
-		StartCoroutine(Wait(_random.Next(0, 50)));
+		StartCoroutine(Wait(_random.Next(0, 20)));
 	}
 	
 	// Update is called once per frame
@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
 			int attackersIndex = _random.Next(0, Attackers.Length);
 			GameObject attackerPrefab = Attackers[attackersIndex];
 			int time = attackerPrefab.GetComponent<Attacker>().SeenEverySeconds;
-			float seconds = _random.Next(time/50, time * 50) ;
+			float seconds = _random.Next(time/20, time * 20) ;
 			StartCoroutine(Wait(seconds));
 			Spawn(attackerPrefab);
 		}
