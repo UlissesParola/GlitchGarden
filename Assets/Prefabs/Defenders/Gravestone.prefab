@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114077601252214590}
   m_Layer: 0
   m_Name: Gravestone
-  m_TagString: GraveStone
+  m_TagString: Defender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d556042f86ddc8e4b98a414d89c12df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarCost: 20
+  StarCost: 10
 --- !u!114 &114077601252214590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 10
+  HealthPoints: 30
 --- !u!114 &114873138062496244
 MonoBehaviour:
   m_ObjectHideFlags: 1

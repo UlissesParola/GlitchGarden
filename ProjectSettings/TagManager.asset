@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - AudioManager
-  - GraveStone
+  - Attacker
+  - Defender
+  - Projectile
+  - InGameMenu
   layers:
   - Default
   - TransparentFX

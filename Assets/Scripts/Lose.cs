@@ -21,7 +21,7 @@ public class Lose : MonoBehaviour
 	{
 		if (other.GetComponent<Attacker>())
 		{
-			_levelManager.LoadScene("03a Lose");
+			_levelManager.LoadScene("03b Lose");
 		}
 	}
 }
