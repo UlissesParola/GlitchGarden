@@ -9,6 +9,7 @@ TagManager:
   - Defender
   - Projectile
   - InGameMenu
+  - LevelManager
   layers:
   - Default
   - TransparentFX

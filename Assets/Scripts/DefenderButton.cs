@@ -24,9 +24,9 @@ public class DefenderButton : MonoBehaviour
 		
 		foreach (DefenderButton obj in _defenderButtons)
 		{
-				obj.GetComponent<SpriteRenderer>().color = Color.black;
+				obj.GetComponentInChildren<SpriteRenderer>().color = Color.black;
 		}
 		
-		this.GetComponent<SpriteRenderer>().color = Color.white;
+		this.GetComponentInChildren<SpriteRenderer>().color = Color.white;
 	}
 }

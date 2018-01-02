@@ -5,6 +5,7 @@ using UnityEngine;
 public class InGameMenu : MonoBehaviour
 {
 	public GameObject InGameMenuCanvas;
+	public LevelManager LevelManager;
 
 	private void OnMouseDown()
 	{
@@ -16,6 +17,12 @@ public class InGameMenu : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		InGameMenuCanvas.SetActive(false);
+	}
+
+	public void BackToStartMenu()
+	{
+		Time.timeScale = 1;
+		LevelManager.LoadScene("01a StartMenu");
 	}
 
 }

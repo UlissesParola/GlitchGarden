@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
 	void Start () {
 		int seed = Mathf.RoundToInt(this.transform.position.y * System.DateTime.Now.Millisecond);
 		_random = new Random(seed);
-		StartCoroutine(Wait(_random.Next(0, 20)));
+		StartCoroutine(Wait(_random.Next(10, 30)));
 	}
 	
 	// Update is called once per frame

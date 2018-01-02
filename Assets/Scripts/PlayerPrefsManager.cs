@@ -6,6 +6,7 @@ public class PlayerPrefsManager : MonoBehaviour
 {
 	private const string MasterVolumeKey = "MasterVolume";
 	private const string DifficultyKey = "Difficulty";
+	private const string HideTutorialKey = "HideTutorial";
 
 	public static void SetMasterVolume(float volume)
 	{
@@ -18,7 +19,7 @@ public class PlayerPrefsManager : MonoBehaviour
 			Debug.LogError("Volume out of range.");
 		}
 	}
-	
+
 	public static float GetMasterVolume()
 	{
 		return PlayerPrefs.GetFloat(MasterVolumeKey);
@@ -39,5 +40,22 @@ public class PlayerPrefsManager : MonoBehaviour
 	public static int GetDifficulty()
 	{
 		return PlayerPrefs.GetInt(DifficultyKey);
+	}
+
+	public static void SetHideTutorial(int enable)
+	{
+		if (enable == 0 || enable == 1)
+		{
+			PlayerPrefs.SetInt(HideTutorialKey, enable);
+		}
+		else
+		{
+			Debug.LogError("Show Tutorial out of range");
+		}
+	}
+
+	public static int GetHideTutorial()
+	{
+		return PlayerPrefs.GetInt(HideTutorialKey);
 	}
 }

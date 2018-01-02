@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +9,10 @@ public class OptionsController : MonoBehaviour
     public Slider VolumeSlider;
     public Text DifficultyText;
     public Text VolumeText;
+    public Toggle ShowTutorialToggle;
 
     private int _difficultyIndex = 1;
+    private int _hideTutorial;
     private AudioManager _audioManager;
     private float _currentVolume;
     private readonly string[] _difficultyLabels = {"Easy", "Normal", "Hard"};
@@ -63,17 +66,29 @@ public class OptionsController : MonoBehaviour
         DifficultyText.text = _difficultyLabels[_difficultyIndex];
     }
 
+    public void ChangeShowTutorial(bool enable)
+    {    
+ 
+        _hideTutorial = Convert.ToInt32(!enable);
+    }
+
     public void SaveOptions()
     {
         PlayerPrefsManager.SetMasterVolume(_currentVolume);
         PlayerPrefsManager.SetDifficulty(_difficultyIndex);
+        PlayerPrefsManager.SetHideTutorial(_hideTutorial);
     }
 
     private void LoadOptions()
     {
         ChangeVolume(PlayerPrefsManager.GetMasterVolume());
         VolumeSlider.value = _currentVolume;
-        ChangeDifficulty(PlayerPrefsManager.GetDifficulty());  
+        
+        ChangeDifficulty(PlayerPrefsManager.GetDifficulty());
+
+        bool hideTutorial = Convert.ToBoolean(PlayerPrefsManager.GetHideTutorial());
+        ChangeShowTutorial(!hideTutorial);
+        ShowTutorialToggle.isOn = !hideTutorial;
     }
 
     public void SetDefaults()
@@ -81,5 +96,7 @@ public class OptionsController : MonoBehaviour
         ChangeVolume(1f);
         VolumeSlider.value = 1f;
         ChangeDifficulty(1);
+        ChangeShowTutorial(true);
+        ShowTutorialToggle.isOn = true;
     }
 }
