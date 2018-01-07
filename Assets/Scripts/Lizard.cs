@@ -4,7 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Attacker))]
 public class Lizard : MonoBehaviour {
-	
 	private Attacker _attacker;
 
 	// Use this for initialization

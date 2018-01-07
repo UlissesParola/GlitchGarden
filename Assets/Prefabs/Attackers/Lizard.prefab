@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114271437331109544}
   - component: {fileID: 114542008838474288}
   - component: {fileID: 114464458164339232}
+  - component: {fileID: 82125637153886388}
+  - component: {fileID: 114143800554028082}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Attacker
@@ -120,6 +122,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43000787, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &82125637153886388
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076732128328686}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95160473364400640
 Animator:
   serializedVersion: 3
@@ -137,6 +219,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114143800554028082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076732128328686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8f9eae050158741a7749d68ff171dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114271437331109544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HittedSound: {fileID: 8300000, guid: 141177ba9b709f540a5c4b73da1b803a, type: 3}
+  DeathSound: {fileID: 8300000, guid: aa973642e745a4847963cdcfa8bbfcb6, type: 3}
   HealthPoints: 15
 --- !u!114 &114464458164339232
 MonoBehaviour:
@@ -172,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkingSpeed: 1
-  SeenEverySeconds: 5
+  SeenEverySeconds: 10
 --- !u!212 &212317971541409574
 SpriteRenderer:
   m_ObjectHideFlags: 1

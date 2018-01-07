@@ -6,18 +6,19 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
 	public float LevelDuration;
+    public float LastAttackDuration;
+    public bool IsTimeForLastAttack;
 	public GameObject LevelEndCanvas;
-	public AudioClip LevelEndSound;
-	
-	private SceneAudioManager _audioManager;
+
 	private bool _levelEnded;
 	private LevelManager _levelManager;
+    private float _lastAttackTime;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		_levelManager = FindObjectOfType<LevelManager>();
-		_audioManager = GameObject.FindObjectOfType<SceneAudioManager>();
+        _lastAttackTime = LevelDuration - LastAttackDuration;
 	}
 	
 	// Update is called once per frame
@@ -29,30 +30,19 @@ public class GameTimer : MonoBehaviour
 		{
 			LevelEnd();
 		}
-	}
 
-	void DestroyObjectsInScene()
-	{
-		string[] tagsToDestroy = {"Attacker", "Defender", "Projectile"};
-
-		foreach (string tagToDestroy in tagsToDestroy)
-		{
-			GameObject[] objs =  GameObject.FindGameObjectsWithTag(tagToDestroy);
-			foreach (GameObject obj in objs)
-			{
-				Destroy(obj);
-			}
-		}
-
+        if (Time.timeSinceLevelLoad > _lastAttackTime && IsTimeForLastAttack == false)
+        {
+            IsTimeForLastAttack = true;
+            Debug.Log("Time for a massive attack!");
+        }
 	}
 
 	void LevelEnd()
 	{
-		DestroyObjectsInScene();
-		LevelEndCanvas.SetActive(true);
-		_audioManager.PlayClip(LevelEndSound);
+        LevelEndCanvas.SetActive(true);
 		_levelEnded = true;
-		Time.timeScale = 0;
+
 	}
 
 	public void LoadNextlevel()

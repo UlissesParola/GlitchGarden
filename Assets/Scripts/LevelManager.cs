@@ -44,11 +44,13 @@ public class LevelManager : MonoBehaviour
 
 	public void Restart()
 	{
+        Time.timeScale = 1;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void RestartLastScene()
 	{
-		SceneManager.LoadScene(_lastScene);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(_lastScene);
 	}
 }

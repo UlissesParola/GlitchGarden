@@ -10,6 +10,7 @@ TagManager:
   - Projectile
   - InGameMenu
   - LevelManager
+  - Level Canvas
   layers:
   - Default
   - TransparentFX

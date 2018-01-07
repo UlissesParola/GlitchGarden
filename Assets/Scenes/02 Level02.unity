@@ -1433,9 +1433,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 528225762}
     m_Modifications:
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1469,6 +1474,12 @@ Prefab:
       propertyPath: m_Name
       value: Spawning Point
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1088251932228932, guid: ced520baa33b4c84f952493015b8e931,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -1716,6 +1727,60 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2138361498}
+    - target: {fileID: 114148590685108868, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b6f71f63be7fbf41a30864f1cba37df,
+        type: 3}
+    - target: {fileID: 1823283329257516, guid: 7835e47aea53be84db004745f66bd956, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709822981136784, guid: 7835e47aea53be84db004745f66bd956, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224111713773060566, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 348.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224038600433519380, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 348.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597080648358590, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597080648358590, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597080648358590, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432229220203790, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432229220203790, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432229220203790, guid: 7835e47aea53be84db004745f66bd956,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7835e47aea53be84db004745f66bd956, type: 2}
   m_IsPrefabParent: 0
@@ -2014,6 +2079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InGameMenuCanvas: {fileID: 0}
+  LevelManager: {fileID: 0}
 --- !u!212 &1216060615
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2437,9 +2503,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 528225762}
     m_Modifications:
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2473,6 +2544,12 @@ Prefab:
       propertyPath: m_Name
       value: Spawning Point
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1088251932228932, guid: ced520baa33b4c84f952493015b8e931,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2483,9 +2560,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 528225762}
     m_Modifications:
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2519,6 +2601,12 @@ Prefab:
       propertyPath: m_Name
       value: Spawning Point
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1088251932228932, guid: ced520baa33b4c84f952493015b8e931,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2571,9 +2659,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 528225762}
     m_Modifications:
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2603,6 +2696,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1088251932228932, guid: ced520baa33b4c84f952493015b8e931,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2876,9 +2975,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 528225762}
     m_Modifications:
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2912,6 +3016,12 @@ Prefab:
       propertyPath: m_Name
       value: 'Spawning Point '
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1088251932228932, guid: ced520baa33b4c84f952493015b8e931,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2929,7 +3039,7 @@ GameObject:
   - component: {fileID: 1977711260}
   m_Layer: 5
   m_Name: Level Canvas
-  m_TagString: Untagged
+  m_TagString: Level Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3183,5 +3293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelDuration: 180
+  LastAttackDuration: 0
+  IsTimeForLastAttack: 0
   LevelEndCanvas: {fileID: 639675610}
-  LevelEndSound: {fileID: 8300000, guid: faaa11282ef4acb46a64739e3edfc114, type: 3}

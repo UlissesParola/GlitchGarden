@@ -1,39 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
 	public GameObject[] Attackers;
+    public float MaxDelayFactor;
+    public float MinDelayFactor;
 
-	private Random _random;
-	private bool _waiting;
+    private bool _waiting;
+    private GameTimer _gameTimer;
+
 	
 	// Use this for initialization
 	void Start () {
-		int seed = Mathf.RoundToInt(this.transform.position.y * System.DateTime.Now.Millisecond);
-		_random = new Random(seed);
-		StartCoroutine(Wait(_random.Next(10, 30)));
+		StartCoroutine(Wait(Random.Range(10f, 30f)));
+        _gameTimer = FindObjectOfType<GameTimer>();
+        MaxDelayFactor = 20;
+        MinDelayFactor = 2;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		/*foreach (GameObject thisAttacker in Attackers)
+        /*foreach (GameObject thisAttacker in Attackers)
 		{
 			if (IsTimeToSpawn(thisAttacker))
 			{
 				Spawn(thisAttacker);
 			}
 		}*/
+
+        if (_gameTimer.IsTimeForLastAttack)
+        {
+            MaxDelayFactor = 3;
+            MinDelayFactor = 5;
+        }
 		
 		if (!_waiting)
 		{
-			int attackersIndex = _random.Next(0, Attackers.Length);
+			int attackersIndex = Random.Range(0, Attackers.Length);
+            Debug.Log("Attacker: " + attackersIndex);
 			GameObject attackerPrefab = Attackers[attackersIndex];
 			int time = attackerPrefab.GetComponent<Attacker>().SeenEverySeconds;
-			float seconds = _random.Next(time/20, time * 20) ;
+			float seconds = Random.Range(time/MinDelayFactor, time + MaxDelayFactor) ;
 			StartCoroutine(Wait(seconds));
 			Spawn(attackerPrefab);
 		}
@@ -56,7 +67,7 @@ public class Spawner : MonoBehaviour
 	private bool IsTimeToSpawn(GameObject attacker) {
 		var myAttacker = attacker.GetComponent<Attacker>();
 		float secondsPerSpawn = myAttacker.SeenEverySeconds;
-		float probabilityToSpawnInGivenSecond = (1 / secondsPerSpawn) / 5;
+		float probabilityToSpawnInGivenSecond = (1 / secondsPerSpawn) / MaxDelayFactor;
  
 		if (Time.deltaTime > secondsPerSpawn) {
 			Debug.LogWarning("Spawn rate capped by frame rate");

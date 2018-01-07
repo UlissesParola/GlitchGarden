@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
@@ -24,5 +25,11 @@ public class InGameMenu : MonoBehaviour
 		Time.timeScale = 1;
 		LevelManager.LoadScene("01a StartMenu");
 	}
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        LevelManager.Restart();
+    }
 
 }
