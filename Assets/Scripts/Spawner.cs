@@ -17,8 +17,8 @@ public class Spawner : MonoBehaviour
 	void Start () {
 		StartCoroutine(Wait(Random.Range(10f, 30f)));
         _gameTimer = FindObjectOfType<GameTimer>();
-        MaxDelayFactor = 20;
-        MinDelayFactor = 2;
+        MaxDelayFactor = 15;
+        MinDelayFactor = 3;
 	}
 	
 	// Update is called once per frame
@@ -34,8 +34,8 @@ public class Spawner : MonoBehaviour
 
         if (_gameTimer.IsTimeForLastAttack)
         {
-            MaxDelayFactor = 3;
-            MinDelayFactor = 5;
+            MaxDelayFactor = 0;
+            MinDelayFactor = 3;
         }
 		
 		if (!_waiting)
