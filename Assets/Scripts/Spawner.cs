@@ -6,45 +6,52 @@ using Random = UnityEngine.Random;
 public class Spawner : MonoBehaviour
 {
 	public GameObject[] Attackers;
-    public float MaxDelayFactor;
-    public float MinDelayFactor;
+    public float MaxSpawnDelay;
+    public float MinSpawnDelay;
 
     private bool _waiting;
     private GameTimer _gameTimer;
+    private float _attackersTotalWeight;
 
 	
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(Wait(Random.Range(10f, 30f)));
+		StartCoroutine(Wait(Random.Range(15f, 30f)));
         _gameTimer = FindObjectOfType<GameTimer>();
-        MaxDelayFactor = 15;
-        MinDelayFactor = 3;
+        MaxSpawnDelay = 20;
+        MinSpawnDelay = 10;
+
+        foreach (var attacker in Attackers)
+        {
+            _attackersTotalWeight += attacker.GetComponent<Attacker>().AttackerSpawnWeight;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        /*foreach (GameObject thisAttacker in Attackers)
-		{
-			if (IsTimeToSpawn(thisAttacker))
-			{
-				Spawn(thisAttacker);
-			}
-		}*/
+        /*if (!_waiting)
+        {
+            foreach (GameObject thisAttacker in Attackers)
+            {
+                if (IsTimeToSpawn(thisAttacker))
+                {
+                    Spawn(thisAttacker);
+                }
+            }
+        }*/
+
 
         if (_gameTimer.IsTimeForLastAttack)
         {
-            MaxDelayFactor = 0;
-            MinDelayFactor = 3;
+            MaxSpawnDelay = 10;
+            MinSpawnDelay = 5;
         }
 		
 		if (!_waiting)
 		{
-			int attackersIndex = Random.Range(0, Attackers.Length);
-            Debug.Log("Attacker: " + attackersIndex);
-			GameObject attackerPrefab = Attackers[attackersIndex];
-			int time = attackerPrefab.GetComponent<Attacker>().SeenEverySeconds;
-			float seconds = Random.Range(time/MinDelayFactor, time + MaxDelayFactor) ;
+            GameObject attackerPrefab = ChooseAttacker();
+			float seconds = Random.Range(MinSpawnDelay, MaxSpawnDelay) ;
 			StartCoroutine(Wait(seconds));
 			Spawn(attackerPrefab);
 		}
@@ -64,10 +71,10 @@ public class Spawner : MonoBehaviour
 		_waiting = false;
 	}
 	
-	private bool IsTimeToSpawn(GameObject attacker) {
+	/*private bool IsTimeToSpawn(GameObject attacker) {
 		var myAttacker = attacker.GetComponent<Attacker>();
-		float secondsPerSpawn = myAttacker.SeenEverySeconds;
-		float probabilityToSpawnInGivenSecond = (1 / secondsPerSpawn) / MaxDelayFactor;
+		float secondsPerSpawn = myAttacker.SeenEverySeconds / SpawnRate;
+		float probabilityToSpawnInGivenSecond = (1 / secondsPerSpawn) / Lanes;
  
 		if (Time.deltaTime > secondsPerSpawn) {
 			Debug.LogWarning("Spawn rate capped by frame rate");
@@ -80,5 +87,29 @@ public class Spawner : MonoBehaviour
 			return true;
 		else
 			return false;
-	}
+	}*/
+
+    private GameObject ChooseAttacker()
+    {
+        float prob = Random.Range(0f, 1f);
+        Debug.Log("prob: " + prob);
+        float totalProb = 0;
+
+        foreach (GameObject attacker in Attackers)
+        {
+            Debug.Log(attacker.name);
+            float attackerProb = attacker.GetComponent<Attacker>().AttackerSpawnWeight / _attackersTotalWeight;
+            Debug.Log(attackerProb);
+            totalProb += attackerProb;
+            Debug.Log("total prob : " + totalProb);
+
+            if (prob < totalProb)
+            { 
+                Debug.Log(attacker.name + "Spawn");
+                 return attacker; 
+            } 
+        }
+
+        return Attackers[0];
+    }
 }

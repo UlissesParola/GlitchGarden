@@ -26,7 +26,6 @@ public class StarBonusSpawner : MonoBehaviour {
     private void SpawnStar()
     {
         int posX = UnityEngine.Random.Range(1, 9);
-        Debug.Log(posX);
         Instantiate(StarBonusPrefab, new Vector3(posX, 7, -5), Quaternion.identity);
     }
 }

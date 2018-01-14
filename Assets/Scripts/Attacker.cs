@@ -11,6 +11,8 @@ public class Attacker : MonoBehaviour
 	[Tooltip("Averange number of seconds between apearences")] 
 	public int SeenEverySeconds;
 
+    public int AttackerSpawnWeight;
+
 	private GameObject _currentTarget;
 	private Animator _anim;
 

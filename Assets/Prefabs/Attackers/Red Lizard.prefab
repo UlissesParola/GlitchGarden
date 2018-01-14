@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82125637153886388}
   - component: {fileID: 114143800554028082}
   m_Layer: 0
-  m_Name: Lizard
+  m_Name: Red Lizard
   m_TagString: Attacker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HittedSound: {fileID: 8300000, guid: 141177ba9b709f540a5c4b73da1b803a, type: 3}
   DeathSound: {fileID: 8300000, guid: aa973642e745a4847963cdcfa8bbfcb6, type: 3}
-  HealthPoints: 15
+  HealthPoints: 30
 --- !u!114 &114464458164339232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,8 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkingSpeed: 1
-  SeenEverySeconds: 10
-  AttackerSpawnWeight: 6
+  SeenEverySeconds: 20
+  AttackerSpawnWeight: 1
 --- !u!212 &212317971541409574
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -304,7 +304,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 44c8684357601ba4b9cc34d6df6d9d90, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.53676474, b: 0.53676474, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

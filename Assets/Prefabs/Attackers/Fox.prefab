@@ -242,7 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkingSpeed: 0.4
-  SeenEverySeconds: 10
+  SeenEverySeconds: 15
+  AttackerSpawnWeight: 3
 --- !u!114 &114552954503876802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HittedSound: {fileID: 8300000, guid: 8ec1d48e1f4f4f04185c570d4dae2030, type: 3}
   DeathSound: {fileID: 8300000, guid: 8ec1d48e1f4f4f04185c570d4dae2030, type: 3}
-  HealthPoints: 10
+  HealthPoints: 20
 --- !u!114 &114996850638893484
 MonoBehaviour:
   m_ObjectHideFlags: 1

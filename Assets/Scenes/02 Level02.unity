@@ -1061,7 +1061,7 @@ Prefab:
     - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
         type: 2}
       propertyPath: Attackers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1115,6 +1115,12 @@ Prefab:
       propertyPath: MinDelayFactor
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2589,6 +2595,21 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198926560053223298, guid: 1469e827f7c8cd64e86d56932a0883eb,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198926560053223298, guid: 1469e827f7c8cd64e86d56932a0883eb,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198926560053223298, guid: 1469e827f7c8cd64e86d56932a0883eb,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1469e827f7c8cd64e86d56932a0883eb, type: 2}
   m_IsPrefabParent: 0
@@ -2711,7 +2732,7 @@ Prefab:
     - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
         type: 2}
       propertyPath: Attackers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2765,6 +2786,12 @@ Prefab:
       propertyPath: MinDelayFactor
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2854,7 +2881,7 @@ Prefab:
     - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
         type: 2}
       propertyPath: Attackers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2908,6 +2935,12 @@ Prefab:
       propertyPath: MinDelayFactor
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2999,7 +3032,7 @@ Prefab:
     - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
         type: 2}
       propertyPath: Attackers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3049,6 +3082,12 @@ Prefab:
       propertyPath: MinDelayFactor
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -3323,7 +3362,7 @@ Prefab:
     - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
         type: 2}
       propertyPath: Attackers.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4670669644676478, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3377,6 +3416,12 @@ Prefab:
       propertyPath: MinDelayFactor
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: Attackers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0

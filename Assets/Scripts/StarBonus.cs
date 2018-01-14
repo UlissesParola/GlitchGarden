@@ -19,11 +19,6 @@ public class StarBonus : MonoBehaviour {
         _rigidBody2D.velocity = Vector3.down; 
 	}
 
-    private void Update()
-    {
-        Debug.Log(_rigidBody2D.velocity);
-    }
-
     private void OnMouseDown()
     {
         _animator.SetTrigger("Pop");
@@ -38,7 +33,6 @@ public class StarBonus : MonoBehaviour {
     public void DestroyStar()
     {
         _starDisplay.AddStars(10);
-        Debug.Log("Star die");
         Destroy(gameObject);
     }
 }
