@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d556042f86ddc8e4b98a414d89c12df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarCost: 40
+  StarCost: 30
 --- !u!114 &114706861675422912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bffb398066fb545943b74836192f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 10
+  HittedSound: {fileID: 0}
+  DeathSound: {fileID: 0}
+  HealthPoints: 15
 --- !u!212 &212369561711130480
 SpriteRenderer:
   m_ObjectHideFlags: 1

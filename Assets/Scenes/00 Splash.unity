@@ -148,8 +148,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: caef3048b7ee34690b330ed6629da3c4, type: 3}
   - {fileID: 8300000, guid: e2aa4dbcd3dcec143846f8b107dcbd1d, type: 3}
   - {fileID: 8300000, guid: 84a90e42517c7ed4e8ed1f55761d4520, type: 3}
+  - {fileID: 8300000, guid: caef3048b7ee34690b330ed6629da3c4, type: 3}
+  - {fileID: 8300000, guid: faaa11282ef4acb46a64739e3edfc114, type: 3}
   - {fileID: 8300000, guid: 2bf6e1af1a8278b4e9ae595906851023, type: 3}
-  - {fileID: 8300000, guid: 8a0fda8aff6d24fbea3bf3e1a5929f6c, type: 3}
   ActualClipIndex: 0
 --- !u!82 &38694551
 AudioSource:

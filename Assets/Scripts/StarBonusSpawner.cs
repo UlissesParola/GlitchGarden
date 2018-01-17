@@ -11,8 +11,20 @@ public class StarBonusSpawner : MonoBehaviour {
     private float _timeToSpawn;
 	// Use this for initialization
 	void Start () {
+        int difficulty = PlayerPrefsManager.GetDifficulty();
+
+        switch (difficulty)
+        {
+            case 0:
+                StarBirthInterval -= 5;
+                break;
+            case 2:
+                StarBirthInterval += 5;
+                break;
+        }
+
         _timeToSpawn = Time.time + StarBirthInterval;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

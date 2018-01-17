@@ -380,8 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13361c8d438da7747874d38ba235ced5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InGameMenuCanvas: {fileID: 0}
-  LevelManager: {fileID: 0}
+  InGameMenuCanvas: {fileID: 1944795770}
+  LevelManager: {fileID: 596685958}
 --- !u!212 &377812184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1121,6 +1121,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
         type: 2}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MaxSpawnDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MinSpawnDelay
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2610,6 +2620,16 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198926560053223298, guid: 1469e827f7c8cd64e86d56932a0883eb,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198926560053223298, guid: 1469e827f7c8cd64e86d56932a0883eb,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1469e827f7c8cd64e86d56932a0883eb, type: 2}
   m_IsPrefabParent: 0
@@ -2792,6 +2812,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
         type: 2}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MaxSpawnDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MinSpawnDelay
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -2941,6 +2971,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
         type: 2}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MaxSpawnDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MinSpawnDelay
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -3088,6 +3128,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
         type: 2}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MaxSpawnDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MinSpawnDelay
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -3290,6 +3340,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ec4e0e89f38a5b46a628e8dd1e88af9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1944795770 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1110841535357770, guid: 6ec4e0e89f38a5b46a628e8dd1e88af9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1944795769}
 --- !u!1 &1952386512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3477,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1076732128328686, guid: b78f1730adf71614bafaecb5fb26aa6e,
         type: 2}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MaxSpawnDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828468775953274, guid: 37ea598dc54d40348aebb11b1bc5556e,
+        type: 2}
+      propertyPath: MinSpawnDelay
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37ea598dc54d40348aebb11b1bc5556e, type: 2}
   m_IsPrefabParent: 0
@@ -3550,6 +3615,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelDuration: 160
-  LastAttackDuration: 30
+  LastAttackDuration: 50
   IsTimeForLastAttack: 0
   LevelEndCanvas: {fileID: 639675610}

@@ -16,7 +16,23 @@ public class StarDisplay : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		_starsText = GetComponent<Text>();
+        int difficulty = PlayerPrefsManager.GetDifficulty();
+
+        switch (difficulty)
+        {
+            case 0:
+                Stars += 20;
+                break;
+            case 2:
+                Stars -= 20;
+                break;
+            default:
+                Stars = 100;
+                break;
+        }
+
+        _starsText = GetComponent<Text>();
+        _starsText.text = Stars.ToString();
 	}
 
 	public void AddStars(int amount)
